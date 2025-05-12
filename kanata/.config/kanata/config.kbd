@@ -1,0 +1,31 @@
+;; Kanata config for caps -> esc+super
+
+(defcfg 
+  process-unmapped-keys yes
+)
+
+
+(defsrc
+  caps a s d f     j k l ;
+)
+
+(defvar
+  tap-time 150
+  hold-time 200
+)
+
+(defalias
+  escsuper (tap-hold $tap-time $hold-time esc lmet)
+  a-mod (multi f24 (tap-hold $tap-time $hold-time a lmet))
+  s-mod (multi f24 (tap-hold $tap-time $hold-time s lalt))
+  d-mod (multi f24 (tap-hold $tap-time $hold-time d lsft))
+  f-mod (multi f24 (tap-hold $tap-time $hold-time f lctl))
+  ;-mod (multi f24 (tap-hold $tap-time $hold-time ; rmet))
+  l-mod (multi f24 (tap-hold $tap-time $hold-time l ralt))
+  k-mod (multi f24 (tap-hold $tap-time $hold-time k rsft))
+  j-mod (multi f24 (tap-hold $tap-time $hold-time j rctl))
+)
+
+(deflayer base
+  @escsuper @a-mod @s-mod @d-mod @f-mod     @j-mod @k-mod @l-mod @;-mod
+)
