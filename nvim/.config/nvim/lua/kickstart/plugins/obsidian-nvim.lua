@@ -24,7 +24,7 @@ return {
     workspaces = {
       {
         name = 'notes',
-        path = '~/workspace/Obsidian/',
+        path = '~/Documents/Obsidian/',
       },
     },
     -- Optional, set the log level for obsidian.nvim. This is an integer corresponding to one of the log
