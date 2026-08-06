@@ -27,7 +27,6 @@ require("lazy").setup({
 
 	-- modular approach: using `require 'path/name'` will
 	-- include a plugin definition from file lua/path/name.lua
-  require("kickstart/plugins/copilot"),
 
 	require("kickstart/plugins/gitsigns"),
 
@@ -50,6 +49,8 @@ require("lazy").setup({
 	require("kickstart/plugins/treesitter"),
 
 	require("kickstart/plugins/luarocks-nvim"),
+
+	require("kickstart/plugins/copilot"),
 
 	-- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
 	-- init.lua. If you want these files, they are in the repository, so you can just download them and
